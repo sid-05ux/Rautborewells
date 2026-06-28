@@ -1,0 +1,7 @@
+
+ALTER TABLE public.documents
+  ADD COLUMN IF NOT EXISTS customer_address text NOT NULL DEFAULT '',
+  ADD COLUMN IF NOT EXISTS gst_rate numeric NOT NULL DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS gst_amount numeric NOT NULL DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS grand_total numeric NOT NULL DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS paid_amount numeric NOT NULL DEFAULT 0;
